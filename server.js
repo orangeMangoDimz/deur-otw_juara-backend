@@ -26,7 +26,9 @@ db.mongoose.connect(db.URL, mongooseConfig)
 app.use(cors(corsOptions))
 app.use(express.json())
 
-// Call mahasiswa route
+// Call All Routes
+require('./app/routes/room_inspiration.routes')(app)
+require('./app/routes/product.routes')(app)
 require('./app/routes/mahasiswa.routes')(app)
 require('./app/routes/user.routes')(app)
 
